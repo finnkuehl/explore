@@ -1,25 +1,34 @@
-import java.util.ArrayList;
+const locations = [
+	{
+		name: "Lissabon",
+		description: "Hauptstadt Portugals",
+		imageUrl: "https://cdn0.scrvt.com/airportdtm/e10ef632ae4e92ec/a5f44d272b1f/v/487a0abf5522/skyline-lissabon-reisefuehrer-dortmund-airport.jpg"
+	},
+	{
+		name: "Porto",
+		description: "Bekannt für seinen Portwein",
+		imageUrl: "https://example.com/porto.jpg"
+	},
+	{
+		name: "Funchal",
+		description: "Hauptstadt der Insel Madeira",
+		imageUrl: "https://example.com/funchal.jpg"
+	},
+	// Add more locations here
+];
 
-public class Location {
-    private String name;
-    private String description;
-    private String imageUrl;
-    
-    public Location(String name, String description, String imageUrl) {
-        this.name = name;
-        this.description = description;
-        this.imageUrl = imageUrl;
-    }
-    
-    // Getters and setters for name, description, and imageUrl
-    
-    public static ArrayList<Location> getSampleLocations() {
-        ArrayList<Location> locations = new ArrayList<Location>();
-        locations.add(new Location("Lissabon", "Hauptstadt Portugals", "https://cdn0.scrvt.com/airportdtm/e10ef632ae4e92ec/a5f44d272b1f/v/487a0abf5522/skyline-lissabon-reisefuehrer-dortmund-airport.jpg));
-        locations.add(new Location("Porto", "Bekannt für seinen Portwein", "https://example.com/porto.jpg"));
-        locations.add(new Location("Funchal", "Hauptstadt der Insel Madeira", "https://example.com/funchal.jpg"));
-        // Add more locations here
-        return locations;
-    }
-}
+let currentLocationIndex = 0;
+
+function swipe(action) {
+	if (action === "cool") {
+		// Code to mark location as cool
+	}
+	else {
+		// Code to mark location as not cool
+	}
+
+	currentLocationIndex++;
+	if (currentLocationIndex >= locations.length) {
+		currentLocationIndex = 0;
+	}
 
