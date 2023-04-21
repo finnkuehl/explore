@@ -1,9 +1,25 @@
-// Initialisierung der Karte
-function initMap() {
-  // Koordinaten des Zentrums der Karte
-  const center = { lat: 52.520008, lng: 13.404954 };
+import java.util.ArrayList;
 
-  // Optionen für die Karte
-  const options = {
-    zoom: 10,
-   
+public class Location {
+    private String name;
+    private String description;
+    private String imageUrl;
+    
+    public Location(String name, String description, String imageUrl) {
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
+    }
+    
+    // Getters and setters for name, description, and imageUrl
+    
+    public static ArrayList<Location> getSampleLocations() {
+        ArrayList<Location> locations = new ArrayList<Location>();
+        locations.add(new Location("Lissabon", "Hauptstadt Portugals", "https://example.com/lisbon.jpg"));
+        locations.add(new Location("Porto", "Bekannt für seinen Portwein", "https://example.com/porto.jpg"));
+        locations.add(new Location("Funchal", "Hauptstadt der Insel Madeira", "https://example.com/funchal.jpg"));
+        // Add more locations here
+        return locations;
+    }
+}
+
