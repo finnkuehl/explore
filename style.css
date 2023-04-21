@@ -1,58 +1,85 @@
-header {
-	background-color: #f8f8f8;
-	padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+nav {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
 nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
+
 nav li {
-	margin: 0 10px;
+  list-style: none;
 }
+
 nav a {
-	text-decoration: none;
-	color: black;
-	font-size: 20px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em;
 }
-nav a:hover {
-	color: grey;
+
+.page {
+  padding: 1em;
 }
-#swipe-page {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 50px;
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
 }
-#location-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-bottom: 30px;
+
+#swipe-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
 }
-#location-image {
-	max-width: 400px;
-	max-height: 400px;
-	margin-bottom: 20px;
+
+.swipe-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
 }
-#buttons-container {
-	display: flex;
-	flex-direction: row;
+
+button {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
-#cool-button, #not-cool-button {
-	font-size: 24px;
-	padding: 10px 20px;
-	margin: 0 20px;
-	border: none;
-	color: white;
-	font-weight: bold;
-	border-radius: 10px;
+
+.cool {
+  background-color: green;
 }
-#cool-button {
-	background-color: green;
+
+.langweilig {
+  background-color: red;
 }
-#not-cool-button {
-	background-color: red;
+
+#map {
+  height: 400px;
+  width: 100%;
 }
+
+#profile {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+
+#profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
