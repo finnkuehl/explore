@@ -1,78 +1,75 @@
-// Objekt mit den 10 Orten in Portugal
-const locations = [
+// Array mit den Orten und Beschreibungen
+const places = [
   {
-    name: "Lissabon",
-    description: "Hauptstadt Portugals und ein wunderschöner Ort zum Besuchen.",
-    image: "lissabon.jpg"
+    name: 'Sintra',
+    image: 'images/sintra.jpg',
+    description: 'Sintra ist eine kleine Stadt in der Nähe von Lissabon und bekannt für ihre prächtigen Paläste und Gärten.'
   },
   {
-    name: "Porto",
-    description: "Eine charmante Stadt im Norden Portugals bekannt für ihren Portwein.",
-    image: "porto.jpg"
+    name: 'Porto',
+    image: 'images/porto.jpg',
+    description: 'Porto ist die zweitgrößte Stadt Portugals und berühmt für ihren Wein und ihre historische Altstadt, die zum UNESCO-Weltkulturerbe gehört.'
   },
   {
-    name: "Funchal",
-    description: "Die Hauptstadt von Madeira, einer portugiesischen Insel im Atlantik.",
-    image: "funchal.jpg"
+    name: 'Lagos',
+    image: 'images/lagos.jpg',
+    description: 'Lagos ist eine Küstenstadt an der Algarve und bekannt für ihre Strände und Klippen sowie ihr historisches Zentrum.'
   },
   {
-    name: "Sintra",
-    description: "Eine Stadt westlich von Lissabon, bekannt für ihre prächtigen Schlösser und Paläste.",
-    image: "sintra.jpg"
+    name: 'Coimbra',
+    image: 'images/coimbra.jpg',
+    description: 'Coimbra ist eine Universitätsstadt im Zentrum Portugals und bekannt für ihre historische Universität und Bibliothek.'
   },
   {
-    name: "Algarve",
-    description: "Eine Küstenregion im Süden Portugals mit schönen Stränden und einem milden Klima.",
-    image: "algarve.jpg"
+    name: 'Lissabon',
+    image: 'images/lisbon.jpg',
+    description: 'Lissabon ist die Hauptstadt Portugals und bekannt für ihre historische Altstadt, ihre Brücken und ihre Aussichtspunkte.'
   },
   {
-    name: "Coimbra",
-    description: "Eine alte Universitätsstadt im Zentrum Portugals mit einer reichen Geschichte.",
-    image: "coimbra.jpg"
+    name: 'Funchal',
+    image: 'images/funchal.jpg',
+    description: 'Funchal ist die Hauptstadt der portugiesischen Insel Madeira und bekannt für ihre Gärten, Parks und die Altstadt.'
   },
   {
-    name: "Guimaraes",
-    description: "Eine historische Stadt im Norden Portugals, die als Geburtsort der Nation gilt.",
-    image: "guimaraes.jpg"
+    name: 'Evora',
+    image: 'images/evora.jpg',
+    description: 'Évora ist eine Stadt im Süden Portugals und bekannt für ihre römischen Ruinen, mittelalterlichen Gebäude und die Universität.'
   },
   {
-    name: "Evora",
-    description: "Eine wunderschöne Stadt im Alentejo-Region im Süden Portugals.",
-    image: "evora.jpg"
+    name: 'Aveiro',
+    image: 'images/aveiro.jpg',
+    description: 'Aveiro ist eine Küstenstadt im Norden Portugals und bekannt für ihre Kanäle, Brücken und das traditionelle Boot "Moliceiro".'
   },
   {
-    name: "Aveiro",
-    description: "Eine Küstenstadt südlich von Porto, bekannt für ihre Kanäle und bunten Boote.",
-    image: "aveiro.jpg"
+    name: 'Tomar',
+    image: 'images/tomar.jpg',
+    description: 'Tomar ist eine Stadt im Zentrum Portugals und bekannt für ihre römische Brücke, ihre mittelalterliche Burg und das Kloster von Christus.'
   },
   {
-    name: "Braga",
-    description: "Eine historische Stadt im Norden Portugals mit vielen Kirchen und einem beeindruckenden Platz.",
-    image: "braga.jpg"
+    name: 'Guimaraes',
+    image: 'images/guimaraes.jpg',
+    description: 'Guimarães ist eine Stadt im Norden Portugals und bekannt für ihre mittelalterliche Architektur und ihr Schloss.'
   }
 ];
 
-let currentLocationIndex = 0; // Der Index des aktuellen Orts
-let coolLocations = []; // Array für die mit "Cool" bewerteten Orte
-let langweiligLocations = []; // Array für die mit "Langweilig" bewerteten Orte
+// Variablen für die Anzeige des aktuellen Ortes
+const placeImg = document.querySelector('#place-img');
+const placeName = document.querySelector('#place-name');
+const placeDesc = document.querySelector('#place-desc');
 
-// Funktion, um den aktuellen Ort zu ändern
-function changeLocation() {
-  const location = locations[currentLocationIndex]; // Der aktuelle Ort
-  document.getElementById("location-name").textContent = location.name; // Name des Ortes
-  document.getElementById("location-description").textContent = location.description; // Beschreibung des Ortes
-  document.getElementById("location-image").src = "images/" + location.image; // Bild des Ortes
+// Variablen für die Button-Elemente
+const coolBtn = document.querySelector('#cool-btn');
+const boringBtn = document.querySelector('#boring-btn');
+
+// Funktion zum Anzeigen des aktuellen Ortes
+function showPlace(placeIndex) {
+  const place = places[placeIndex];
+  placeImg.src = place.image;
+  placeImg.alt = place.name;
+  placeName.textContent = place.name;
+  placeDesc.textContent = place.description;
 }
 
-// Funktion, um einen Ort zu bewerten
-function rateLocation(rating) {
-  if (rating === "cool") {
-    coolLocations.push(currentLocationIndex); // Aktuellen Ort in das "Cool" Array hinzufügen
-  } else if (rating === "langweilig") {
-    langweiligLocations.push(currentLocationIndex); // Aktuellen Ort in das "Langweilig" Array hinzufügen
-  }
-  currentLocationIndex++; // Nächsten Ort anzeigen
-  if (currentLocationIndex >= locations.length) {
-    // Wenn alle Orte bewertet wurden, zur Karte springen
-    showMap();
- 
+// Initialisierung der App mit dem ersten Ort
+let currentPlace = 0;
+showPlace(currentPlace
