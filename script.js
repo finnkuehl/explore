@@ -15,7 +15,7 @@ public class Location {
     
     public static ArrayList<Location> getSampleLocations() {
         ArrayList<Location> locations = new ArrayList<Location>();
-        locations.add(new Location("Lissabon", "Hauptstadt Portugals", "https://cdn0.scrvt.com/airportdtm/e10ef632ae4e92ec/a5f44d272b1f/v/487a0abf5522/skyline-lissabon-reisefuehrer-dortmund-airport.jpg?nowebp=1"));
+        locations.add(new Location("Lissabon", "Hauptstadt Portugals", "https://cdn0.scrvt.com/airportdtm/e10ef632ae4e92ec/a5f44d272b1f/v/487a0abf5522/skyline-lissabon-reisefuehrer-dortmund-airport.jpg));
         locations.add(new Location("Porto", "Bekannt für seinen Portwein", "https://example.com/porto.jpg"));
         locations.add(new Location("Funchal", "Hauptstadt der Insel Madeira", "https://example.com/funchal.jpg"));
         // Add more locations here
