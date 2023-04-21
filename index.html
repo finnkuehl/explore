@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Meine Orte-Webapp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="card-container">
-      <div class="card">
-        <img src="https://source.unsplash.com/random/300x200" alt="Bild des Ortes">
-        <h2>Ort 1</h2>
-        <div class="button-container">
-          <button class="dislike-button"><i class="fas fa-times"></i></button>
-          <button class="like-button"><i class="fas fa-heart"></i></button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/random/300x200" alt="Bild des Ortes">
-        <h2>Ort 2</h2>
-        <div class="button-container">
-          <button class="dislike-button"><i class="fas fa-times"></i></button>
-          <button class="like-button"><i class="fas fa-heart"></i></button>
-        </div>
-      </div>
-    </div>
-    <div id="map"></div>
-    <script src="https://kit.fontawesome.com/1234567890.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  </body>
+<head>
+	<title>Portugal Swipen</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Portugal Swipen</h1>
+		<nav>
+			<ul>
+				<li><a href="#swipe">Swipen</a></li>
+				<li><a href="#map">Karte</a></li>
+				<li><a href="#account">Account</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="swipe">
+			<h2>Swipen</h2>
+			<div id="card-container"></div>
+			<div id="buttons">
+				<button id="cool-button">Cool</button>
+				<button id="boring-button">Langweilig</button>
+			</div>
+		</section>
+		<section id="map">
+			<h2>Karte</h2>
+			<div id="map-container"></div>
+		</section>
+		<section id="account">
+			<h2>Account</h2>
+			<div id="profile">
+				<img src="profile.png">
+				<h3>Max Mustermann</h3>
+				<p>max.mustermann@example.com</p>
+			</div>
+		</section>
+	</main>
+	<script src="script.js"></script>
+</body>
 </html>
