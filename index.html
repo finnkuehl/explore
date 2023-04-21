@@ -1,46 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
-    <title>Portugal Reise-App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portugal</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#swipe">Swipen</a></li>
-        <li><a href="#karte">Karte</a></li>
-        <li><a href="#account">Account</a></li>
-      </ul>
-    </nav>
-    
-    <div id="swipe" class="page">
-      <h1>Swipen</h1>
-      <div id="swipe-images">
-        <img src="portugal1.jpg" alt="Portugal 1">
-        <div class="swipe-buttons">
-          <button class="cool" onclick="swipe('cool')">Cool</button>
-          <button class="langweilig" onclick="swipe('langweilig')">Langweilig</button>
+    <header>
+      <h1>Portugal</h1>
+      <nav>
+        <ul>
+          <li><a href="#swipen">Swipen</a></li>
+          <li><a href="#karte">Karte</a></li>
+          <li><a href="#account">Account</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="swipen">
+        <h2>Swipen</h2>
+        <div class="swiper">
+          <img src="https://picsum.photos/id/1018/600/400" alt="Bild 1" />
+          <p class="description">
+            Hier könnte eine Beschreibung des Ortes stehen.
+          </p>
+          <div class="buttons">
+            <button class="cool" onclick="swipe('cool')">Cool</button>
+            <button class="boring" onclick="swipe('boring')">Langweilig</button>
+          </div>
         </div>
-      </div>
-    </div>
-    
-    <div id="karte" class="page">
-      <h1>Karte</h1>
-      <div id="map"></div>
-    </div>
-    
-    <div id="account" class="page">
-      <h1>Account</h1>
-      <div id="profile">
-        <img src="profile.jpg" alt="Profilbild">
-        <div id="info">
-          <p>Name: Max Mustermann</p>
-          <p>E-Mail: max@mustermann.com</p>
+        <div class="swiper">
+          <img src="https://picsum.photos/id/1025/600/400" alt="Bild 2" />
+          <p class="description">
+            Hier könnte eine Beschreibung des Ortes stehen.
+          </p>
+          <div class="buttons">
+            <button class="cool" onclick="swipe('cool')">Cool</button>
+            <button class="boring" onclick="swipe('boring')">Langweilig</button>
+          </div>
         </div>
-      </div>
-    </div>
-    
+        <!-- Weitere Swiper-Elemente hier einfügen -->
+      </section>
+
+      <section id="karte">
+        <h2>Karte</h2>
+        <div id="map"></div>
+      </section>
+
+      <section id="account">
+        <h2>Account</h2>
+        <div class="account-info">
+          <img
+            src="https://picsum.photos/id/1035/100/100"
+            alt="Profilbild"
+            class="profile-picture"
+          />
+          <div class="user-info">
+            <p>Name: Max Mustermann</p>
+            <p>E-Mail: max.mustermann@example.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
