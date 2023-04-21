@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Meine Portugal-Seite</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">Swipen</a></li>
-				<li><a href="#">Karte</a></li>
-				<li><a href="#">Account</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<main>
-		<section id="swipe-page">
-			<div id="location-container">
-				<img id="location-image" src="">
-				<div id="location-name"></div>
-				<div id="location-description"></div>
-			</div>
-			<div id="buttons-container">
-				<button id="cool-button" onclick="swipe('cool')">Cool</button>
-				<button id="not-cool-button" onclick="swipe('not-cool')">Langweilig</button>
-			</div>
-		</section>
-	</main>
-
-	<script type="text/javascript" src="script.js"></script>
-</body>
+  <head>
+    <title>Portugal Reise-App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#swipe">Swipen</a></li>
+        <li><a href="#karte">Karte</a></li>
+        <li><a href="#account">Account</a></li>
+      </ul>
+    </nav>
+    
+    <div id="swipe" class="page">
+      <h1>Swipen</h1>
+      <div id="swipe-images">
+        <img src="portugal1.jpg" alt="Portugal 1">
+        <div class="swipe-buttons">
+          <button class="cool" onclick="swipe('cool')">Cool</button>
+          <button class="langweilig" onclick="swipe('langweilig')">Langweilig</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="karte" class="page">
+      <h1>Karte</h1>
+      <div id="map"></div>
+    </div>
+    
+    <div id="account" class="page">
+      <h1>Account</h1>
+      <div id="profile">
+        <img src="profile.jpg" alt="Profilbild">
+        <div id="info">
+          <p>Name: Max Mustermann</p>
+          <p>E-Mail: max@mustermann.com</p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
 </html>
