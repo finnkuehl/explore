@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Portugal Swipen</title>
+	<title>Meine Portugal-Seite</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<header>
-		<h1>Portugal Swipen</h1>
 		<nav>
 			<ul>
-				<li><a href="#swipe">Swipen</a></li>
-				<li><a href="#map">Karte</a></li>
-				<li><a href="#account">Account</a></li>
+				<li><a href="#">Swipen</a></li>
+				<li><a href="#">Karte</a></li>
+				<li><a href="#">Account</a></li>
 			</ul>
 		</nav>
 	</header>
+
 	<main>
-		<section id="swipe">
-			<h2>Swipen</h2>
-			<div id="card-container"></div>
-			<div id="buttons">
-				<button id="cool-button">Cool</button>
-				<button id="boring-button">Langweilig</button>
+		<section id="swipe-page">
+			<div id="location-container">
+				<img id="location-image" src="">
+				<div id="location-name"></div>
+				<div id="location-description"></div>
 			</div>
-		</section>
-		<section id="map">
-			<h2>Karte</h2>
-			<div id="map-container"></div>
-		</section>
-		<section id="account">
-			<h2>Account</h2>
-			<div id="profile">
-				<img src="profile.png">
-				<h3>Max Mustermann</h3>
-				<p>max.mustermann@example.com</p>
+			<div id="buttons-container">
+				<button id="cool-button" onclick="swipe('cool')">Cool</button>
+				<button id="not-cool-button" onclick="swipe('not-cool')">Langweilig</button>
 			</div>
 		</section>
 	</main>
-	<script src="script.js"></script>
+
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
