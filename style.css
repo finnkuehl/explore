@@ -1,85 +1,34 @@
-body {
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-nav {
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+}
+
+header {
   background-color: #333;
-  color: white;
+  color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  align-items: center;
+  padding: 1rem;
 }
 
 nav ul {
   display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
   list-style: none;
 }
 
+nav li:not(:last-child) {
+  margin-right: 1rem;
+}
+
 nav a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0.5em;
-}
-
-.page {
-  padding: 1em;
-}
-
-h1 {
-  font-size: 2em;
-  margin-top: 0;
-}
-
-#swipe-images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2em;
-}
-
-.swipe-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1em;
-}
-
-button {
-  padding: 1em;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-}
-
-.cool {
-  background-color: green;
-}
-
-.langweilig {
-  background-color: red;
-}
-
-#map {
-  height: 400px;
-  width: 100%;
-}
-
-#profile {
-  display: flex;
-  align-items: center;
-  margin-top: 2em;
-}
-
-#profile img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  color: #fff;
+  text-decoration:
