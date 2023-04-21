@@ -1,66 +1,100 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: #f2f2f2;
-  font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
-.card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 50px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+#card-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 300px;
+	background-size: cover;
+	background-position: center;
+	border: 2px solid #333;
+	border-radius: 10px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	width: 80%;
+	max-width: 600px;
+	height: 80%;
+	max-height: 400px;
+	position: relative;
 }
 
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
+#buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
-.card h2 {
-  margin: 20px;
-  font-size: 24px;
+#cool-button {
+	background-color: green;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+#boring-button {
+	background-color: red;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
 }
 
-.dislike-button, .like-button {
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 24px;
-  height: 50px;
-  width: 50px;
+#map-container {
+	height: 400px;
 }
 
-.dislike-button {
-  background-color: #ff6347;
+#profile {
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
 }
 
-.like-button {
-  background-color: #32cd32;
-}
-
-#map {
-  height: 400px;
-  margin: 50px 0;
-  width: 100%;
-}
+#profile img {
+	border-radius: 50%;
+	margin-right: 20px;
+	width: 100
