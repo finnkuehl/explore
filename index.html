@@ -1,33 +1,31 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2707
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html>\
-<head>\
-	<title>Deine Web-App</title>\
-	<link rel="stylesheet" type="text/css" href="https://finnkuehl.github.io/style.css">
-</head>\
-<body>\
-	<div class="container">\
-		<div class="card">\
-			<div class="image">\
-				<img src="https://via.placeholder.com/400x300" alt="Ortsbild">\
-			</div>\
-			<div class="content">\
-				<h2>DOrtsname</h2>\
-				<p>Beschreibung des Orts</p>\
-			</div>\
-			<div class="buttons">\
-				<button class="button-no" onclick="markNotInterested()">Nicht interessant</button>\
-				<button class="button-yes" onclick="markInterested()">Interessant</button>\
-			</div>\
-		</div>\
-	</div>\
-	<script src="script.js"></script>\
-</body>\
-</html>\
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meine Orte-Webapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://source.unsplash.com/random/300x200" alt="Bild des Ortes">
+        <h2>Ort 1</h2>
+        <div class="button-container">
+          <button class="dislike-button"><i class="fas fa-times"></i></button>
+          <button class="like-button"><i class="fas fa-heart"></i></button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/300x200" alt="Bild des Ortes">
+        <h2>Ort 2</h2>
+        <div class="button-container">
+          <button class="dislike-button"><i class="fas fa-times"></i></button>
+          <button class="like-button"><i class="fas fa-heart"></i></button>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <script src="https://kit.fontawesome.com/1234567890.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
